@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap + jQuery Static App</title>
+    <!-- Include Bootstrap CSS from CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Bootstrap JS from CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-light">
+    <header class="p-4 bg-primary text-white text-center">
+        <h1>Welcome to My Bootstrap and jQuery Static App</h1>
+    </header>
+    <main class="container mt-4">
+        <p class="mb-4">This is a simple static application built with Bootstrap and jQuery.</p>
+        <button id="toggleButton" class="btn btn-primary">Toggle Message</button>
+        <div id="message" class="alert alert-info mt-4" style="display: none;">
+            This message is toggled using jQuery!
+        </div>
+    </main>
+    <footer class="p-4 bg-light text-center">
+        <p>© 2024 My Bootstrap App</p>
+    </footer>
+
+    <script>
+        // jQuery to toggle the message
+        $(document).ready(function() {
+            $("#toggleButton").click(function() {
+                $("#message").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
